@@ -1,0 +1,163 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --tf-color-white: #ffffff;
+  --tf-color-mist: #f1f4f6;
+  --tf-color-indigo: #2F3558;
+  --tf-color-emerald: #36b3b3;
+  --tf-color-emerald-dark: hsl(145, 50%, 50%);
+  --tf-color-sapphire: #2458b3;
+  --tf-color-slate-blue: #6f92cc;
+  --tf-color-sky-blue: #becfea;
+  --tf-color-light-slate-blue: #A4B0C3;
+  --tf-color-ruby-red: #d92550;
+  --tf-color-amber: #ffa008;
+
+  --color-background: var(--tf-color-white);
+  --color-text: var(--tf-color-indigo);
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+strong, b {
+  font-weight: 700;
+}
+code {
+  background: rgba(36, 88, 179, .3);
+  padding: 0 5px;
+  border-radius: 4px;
+}
+
+.p-static {
+  position: static!important;
+}
+
+
+#app .combo-box{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+#app .form-field {
+  margin-top: 20px;
+}
+
+#app .combo-box .multiselect{
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+}
+#app .combo-box .multiselect__tags {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+#app .combo-box .combo-box-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  min-height: 38px;
+  width: 38px;
+  background: #e9ecef;
+  border: 1px solid var(--tf-color-sapphire);
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-bottom-left-radius: calc(0.25rem - 1px);
+  border-right: none;
+  color: #495057;
+}
+
+#app .combo-box .tf-input {
+  width: calc(100% - 38px);
+}
+
+
+#app .combo-box.has-item-right .tf-input {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0
+}
+
+#app .combo-box.has-item-left .tf-input {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+#app .combo-box.has-item-right .combo-box-item {
+  border-bottom-right-radius: calc(.25rem - 1px);
+  border-left: 0;
+  border-top-right-radius: calc(.25rem - 1px)
+}
+
+#app .combo-box .has-item-left .combo-box-item {
+  border-bottom-left-radius: calc(.25rem - 1px);
+  border-top-left-radius: calc(.25rem - 1px)
+}
+
+#app .form-field.is-invalid .combo-box-item,
+#app .form-field.is-invalid .tf-input,
+#app .form-field.is-invalid .tf-textarea
+{
+  border-color: var(--tf-color-ruby-red);
+}
+
+#app .form-field .label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: -1;
+  padding: 0;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  transform: translate(0, 0);
+  transform-origin: 0;
+  color: var(--tf-color-sapphire);
+}
+
+#app .form-field .label.active, #app .form-field .label {
+  display: inline;
+  width: auto;
+  transform: translate(1px, -31px);
+  z-index: 1;
+  font-weight: 500;
+}
+
+#app .form-field.is-invalid .label {
+  color: var(--tf-color-ruby-red)
+}

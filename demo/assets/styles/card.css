@@ -1,0 +1,98 @@
+.tf-card {
+  position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  border: 1px solid var(--tf-color-sky-blue);
+  border-radius: .25rem;
+  background-color: var(--tf-color-white);
+}
+
+.tf-card__header {
+  padding: 10px;
+  border-bottom: 1px solid var(--tf-color-sky-blue);
+  background: var(--tf-color-mist);
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+  font-size: .94rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.tf-card__preview {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  overflow: hidden;
+  z-index: 1;
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+}
+
+.tf-card__preview img {
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+  height: 100%;
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+}
+
+.tf-card.has-header .tf-card__preview,
+.tf-card.has-header .tf-card__preview img {
+  border-radius: 0;
+}
+
+.tf-card-preview-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(0%) translateY(100%);
+  z-index: 2;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  transition: all .3s .1s ease;
+}
+.tf-card-preview-description:after {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: '';
+  background: transparent;
+  transition: background .1s .1s linear;
+  z-index: -1;
+}
+
+.tf-card__preview:hover .tf-card-preview-description {
+  opacity: 1;
+  transform: translateX(0%) translateY(0%);
+}
+
+.tf-card__preview:hover .tf-card-preview-description:after {
+  background: rgba(47, 53, 88, .95);
+}
+
+
+.tf-card__content {
+  padding: 10px;
+  flex: 1 1 auto;
+}
+
+.tf-card__footer {
+  padding: 10px;
+  border-top: 1px solid var(--tf-color-sky-blue);
+  background: var(--tf-color-mist);
+  border-bottom-left-radius: calc(.25rem - 1px);
+  border-bottom-right-radius: calc(.25rem - 1px);
+}

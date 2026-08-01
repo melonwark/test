@@ -1,0 +1,43 @@
+@import 'base.css';
+@import "grid.css";
+@import "sidebar.css";
+@import "header.css";
+@import "sidebar-toggle.css";
+@import "multiselect.css";
+@import "datepicker.css";
+@import "tooltip.css";
+@import "table.css";
+@import "table-preloader.css";
+@import "modal.css";
+@import "button.css";
+@import "chat.css";
+@import "confirm.css";
+@import "textarea.css";
+@import "dropdown.css";
+@import "input.css";
+@import "checkbox.css";
+@import "radio.css";
+@import "file.css";
+@import "toast.css";
+@import "badge.css";
+@import "card.css";
+@import "../../../src/styles/table.css";
+@import "../../../src/styles/pagination.css";
+
+@import 'prismjs/themes/prism.css';
+#app {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  font-weight: normal;
+  position: relative;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  margin-bottom: 10px;
+  font-weight: 500;
+}

@@ -1,0 +1,8 @@
+.tf-table-demo {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+
+  th, td { border: 1px solid #becfea; padding: 8px; text-align: left; }
+  th { background-color: #f4f4f4; }
+}

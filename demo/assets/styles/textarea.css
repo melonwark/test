@@ -1,0 +1,32 @@
+.tf-textarea {
+  appearance: none;
+  border: 1px solid var(--tf-color-sapphire);
+  border-radius: .25rem;
+  display: block;
+  color: var(--tf-color-sapphire);;
+  font-size: .75rem;
+  line-height: 1rem;
+  padding: .625rem;
+  width: 100%;
+}
+
+.tf-textarea:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.tf-textarea::placeholder {
+  color: var(--tf-color-slate-blue);
+}
+
+
+
+.tf-textarea:-webkit-autofill,
+.tf-textarea:-webkit-autofill:hover,
+.tf-textarea:-webkit-autofill:focus,
+.tf-textarea:-webkit-autofill{
+  -webkit-text-fill-color: #ссс;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 174, 255, 0.04) 50%, rgba(255, 255, 255, 0) 51%, rgba(0, 174, 255, 0.03) 100%);
+}

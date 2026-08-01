@@ -1,0 +1,41 @@
+
+.tf-table-preloader,.tf-table-preloader * {
+  box-sizing: border-box
+}
+
+.tf-table-preloader {
+  position: relative;
+  justify-self: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+
+.tf-table-preloader .item {
+  border: 6px solid transparent;
+  border-radius: 100%;
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%
+}
+
+.tf-table-preloader .item.item-1 {
+  border-top-color: var(--tf-color-sapphire);
+  animation: preloader-animation 1s infinite
+}
+
+.tf-table-preloader .item.item-2 {
+  border-top-color: var(--tf-color-emerald);;
+  animation: preloader-animation 1s infinite alternate
+}
+
+@keyframes preloader-animation {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(1turn)
+  }
+}

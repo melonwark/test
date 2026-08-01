@@ -1,0 +1,70 @@
+.tf-pagination-container{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.tf-pagination {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+}
+
+.tf-page-link {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: var(--tf-color-sapphire);
+  background-color: var(--tf-color-white);
+  border: 1px solid var(--tf-color-sky-blue);
+}
+
+.tf-page-link:hover {
+  z-index: 2;
+  color: var(--tf-color-sapphire);
+  text-decoration: none;
+  background-color: var(--tf-color-light-slate-blue);
+  border-color: var(--tf-color-sky-blue);
+}
+
+.tf-page-link:focus {
+  z-index: 2;
+  outline: 0;
+  box-shadow: none;
+}
+
+.tf-page-link:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+.tf-page-item:first-child .tf-page-link,
+.tf-pagination .tf-page-number:first-child .tf-page-link {
+  margin-left: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.tf-page-item:last-child .tf-page-link,
+.tf-pagination .tf-page-number:last-child .tf-page-link {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.tf-page-item.active .tf-page-link,
+.tf-pagination .active.tf-page-number .tf-page-link {
+  z-index: 1;
+  color: var(--tf-color-white);
+  background-color: var(--tf-color-sapphire);
+  border-color: var(var(--tf-color-sapphire));
+}
+
+.tf-page-item.disabled .tf-page-link,
+.tf-pagination .disabled.tf-page-number .tf-page-link {
+  color: var(--tf-color-sky-blue);
+  pointer-events: none;
+  cursor: auto;
+  background-color: var(--tf-color-white);
+  border-color: var(--tf-color-light-slate-blue);
+}

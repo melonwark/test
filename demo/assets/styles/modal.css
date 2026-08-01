@@ -1,0 +1,120 @@
+.tf-modal-title{
+  display: inline-block;
+}
+
+.tf-modal-mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4999;
+  overflow: auto;
+  background: rgba(47, 53, 88, .8);;
+  transition: opacity .3s ease;
+  background-clip: padding-box;
+}
+
+.tf-modal-mask::-webkit-scrollbar {
+  background-color: transparent;
+  height: 4px;
+  width: 4px;
+}
+
+.tf-modal-mask::-webkit-scrollbar-track {
+  background: var(--tf-color-sky-blue);
+}
+
+.tf-modal-mask::-webkit-scrollbar-thumb {
+  background-color: var(--tf-color-slate-blue);
+  border-radius: 0.25rem;
+  height: 20px;
+}
+
+.tf-modal-mask::-webkit-scrollbar-thumb:hover {
+  background-color: var(--tf-color-slate-blue);
+}
+
+.tf-modal-mask::-webkit-scrollbar-button {
+  display: none;
+}
+
+
+@supports not selector(::-webkit-scrollbar) {
+  .tf-modal-mask {
+    scrollbar-color: var(--tf-color-slate-blue) transparent;
+    scrollbar-width: thin;
+  }
+}
+
+.tf-modal-container {
+  min-height: calc(100% - (10px * 2));
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+}
+
+.tf-modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid var(--tf-color-sky-blue);
+  transition: all .3s ease;
+}
+
+.tf-modal-header{
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--tf-color-sky-blue);
+  .tf-modal-close {
+    color: var(--tf-color-ruby-red);
+    font-size: 1.3125rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-left: auto;
+    background: transparent;
+    cursor: pointer;
+  }
+}
+
+.tf-modal-body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1rem;
+  overflow: auto;
+}
+
+.tf-modal-footer{
+  padding: 10px 16px 16px;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  border-top: 1px solid var(--tf-color-sky-blue);
+}
+
+.tf-modal-footer>:not(:first-child) {
+  margin-left: .25rem
+}
+
+.modal-enter-active,
+.modal-leave-active,
+.modal-enter-active .tf-modal,
+.modal-leave-active .tf-modal {
+  transition: all .2s ease
+}
+
+.modal-enter-from,.modal-leave-to {
+  opacity: 0!important
+}
+
+.modal-enter-from .tf-modal,
+.modal-leave-to .tf-modal {
+  transform: translateY(-50px)
+}

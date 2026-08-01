@@ -1,0 +1,91 @@
+.tf-checkbox, .tf-switcher {
+  position: relative;
+}
+
+.tf-checkbox input{
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+}
+
+.tf-checkbox-label {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  height: 18px;
+  line-height: 18px;
+  cursor: pointer;
+  color: var(--tf-color-sapphire);
+}
+
+.tf-checkbox-label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 0.25rem;
+  border-width: 1px;
+  border-color: var(--tf-color-sapphire);
+  cursor: pointer;
+}
+
+.tf-checkbox input:checked + .tf-checkbox-label:before {
+  background: url("data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZGF0YS1wcmVmaXg9ImZhciIgZGF0YS1pY29uPSJjaGVjayIgcm9sZT0iaW1nIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBoZWlnaHQ9IjEycHgiIHdpZHRoPSIxMnB4Ij4KICAgIDxwYXRoIGZpbGw9IiMzNmIzYjMiIGQ9Ik00MzUuODQ4IDgzLjQ2NkwxNzIuODA0IDM0Ni41MWwtOTYuNjUyLTk2LjY1MmMtNC42ODYtNC42ODYtMTIuMjg0LTQuNjg2LTE2Ljk3MSAwbC0yOC4yODQgMjguMjg0Yy00LjY4NiA0LjY4Ni00LjY4NiAxMi4yODQgMCAxNi45NzFsMTMzLjQyMSAxMzMuNDIxYzQuNjg2IDQuNjg2IDEyLjI4NCA0LjY4NiAxNi45NzEgMGwyOTkuODEzLTI5OS44MTNjNC42ODYtNC42ODYgNC42ODYtMTIuMjg0IDAtMTYuOTcxbC0yOC4yODQtMjguMjg0Yy00LjY4Ni00LjY4Ni0xMi4yODQtNC42ODYtMTYuOTcgMHoiIGNsYXNzPSIiPjwvcGF0aD4KPC9zdmc+") center no-repeat;
+  background-size: 80% 80%;
+}
+
+.tf-checkbox input:disabled + .tf-checkbox-label {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+.tf-checkbox input:disabled + .tf-checkbox-label:before {
+  cursor: not-allowed;
+}
+
+.tf-switcher input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.tf-switcher .tf-checkbox-label {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  background-color: var(--tf-color-light-slate-blue);
+  border-radius: 22px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  line-height: 22px;
+  padding: 0;
+}
+
+.tf-switcher .tf-checkbox-label:before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.tf-switcher .tf-checkbox-label span {
+  white-space: nowrap;
+  margin-left: 45px;
+}
+
+.tf-switcher input:checked + .tf-checkbox-label {
+  background-color: var(--tf-color-sapphire);
+}
+
+.tf-switcher input:checked + .tf-checkbox-label:before {
+  transform: translateX(18px);
+}

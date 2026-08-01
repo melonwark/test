@@ -1,0 +1,195 @@
+.tf-btn {
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-color: transparent;
+  border-radius: 0.25rem;
+  border-width: 1px;
+}
+
+.tf-btn:disabled {
+  cursor: not-allowed;
+  opacity: .7;
+}
+
+.tf-btn-sm {
+  font-size: .75rem;
+  padding: calc(.3rem - 1px);
+}
+
+.tf-btn-md {
+  font-size: 1rem;
+  padding: calc(.5rem - 1px) calc(1.5rem - 1px);
+}
+
+.tf-btn-lg {
+  font-size: 1.25rem;
+  padding: calc(.7rem - 1px) calc(1.7rem - 1px);
+}
+
+.tf-btn-default {
+  background: var(--tf-color-sapphire);
+  color: var(--tf-color-white);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tf-btn-default:hover {
+  background: color-mix(in srgb, var(--tf-color-sapphire) 80%, black);
+  color: var(--tf-color-white);
+}
+
+.tf-btn-default-outline {
+  background: var(--tf-color-white);
+  border: 1px solid var(--tf-color-sapphire);
+  color: var(--tf-color-sapphire);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.tf-btn-default-outline:hover {
+  background: var(--tf-color-sapphire);
+  border-color: var(--tf-color-sapphire);
+  color: var(--tf-color-white);
+}
+
+.tf-btn-danger {
+  background: var(--tf-color-ruby-red);
+  color: var(--tf-color-white);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tf-btn-danger:hover {
+  background: color-mix(in srgb, var(--tf-color-ruby-red) 80%, black);
+}
+
+.tf-btn-danger-outline {
+  background: var(--tf-color-white);
+  border: 1px solid var(--tf-color-ruby-red);
+  color: var(--tf-color-ruby-red);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.tf-btn-danger-outline:hover {
+  background: var(--tf-color-ruby-red);
+  border-color: var(--tf-color-ruby-red);
+  color: var(--tf-color-white);
+}
+
+.tf-btn-success {
+  background: var(--tf-color-emerald-dark);
+  color: var(--tf-color-white);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tf-btn-success:hover {
+  background: color-mix(in srgb, var(--tf-color-emerald-dark) 80%, black);
+}
+
+.tf-btn-success-outline {
+  background: var(--tf-color-white);
+  border: 1px solid var(--tf-color-emerald-dark);
+  color: var(--tf-color-emerald-dark);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.tf-btn-success-outline:hover {
+  background: var(--tf-color-emerald-dark);
+  border-color: var(--tf-color-emerald-dark);
+  color: var(--tf-color-white);
+}
+
+.tf-btn-warning {
+  background: var(--tf-color-amber);
+  color: var(--tf-color-white);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tf-btn-warning:hover {
+  background: color-mix(in srgb, var(--tf-color-amber) 80%, black);
+}
+
+.tf-btn-warning-outline {
+  background: var(--tf-color-white);
+  border: 1px solid var(--tf-color-amber);
+  color: var(--tf-color-amber);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.tf-btn-warning-outline:hover {
+  background: var(--tf-color-amber);
+  border-color: var(--tf-color-amber);
+  color: var(--tf-color-white);
+}
+
+.tf-btn-info {
+  background: var(--tf-color-slate-blue);
+  color: var(--tf-color-white);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tf-btn-info:hover {
+  background: color-mix(in srgb, var(--tf-color-slate-blue) 80%, black);
+}
+
+.tf-btn-info-outline {
+  background: var(--tf-color-white);
+  border: 1px solid var(--tf-color-slate-blue);
+  color: var(--tf-color-slate-blue);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.tf-btn-info-outline:hover {
+  background: var(--tf-color-slate-blue);
+  border-color: var(--tf-color-slate-blue);
+  color: var(--tf-color-white);
+}
+
+.tf-btn-secondary {
+  background: var(--tf-color-light-slate-blue);
+  color: var(--tf-color-white);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tf-btn-secondary:hover {
+  background: color-mix(in srgb, var(--tf-color-light-slate-blue) 80%, black);
+}
+
+.tf-btn-secondary-outline {
+  background: var(--tf-color-white);
+  border: 1px solid var(--tf-color-light-slate-blue);
+  color: var(--tf-color-light-slate-blue);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.tf-btn-secondary-outline:hover {
+  background: var(--tf-color-light-slate-blue);
+  border-color: var(--tf-color-light-slate-blue);
+  color: var(--tf-color-white);
+}
+
+.tf-btn-light {
+  background: transparent;
+  border-color: transparent;
+  color: var(--tf-color-sapphire);
+}
+
+.tf-btn-light:hover {
+  background: var(--tf-color-mist);
+  border-color: transparent;
+  color: color-mix(in srgb, var(--tf-color-sapphire) 80%, black);
+}
+
+.tf-btn-plain {
+  background: transparent;
+  border-color: transparent;
+  color: var(--tf-color-sapphire);
+}
+
+.tf-btn-plain:hover {
+  background: transparent;
+  border-color: transparent;
+  color: var(--tf-color-emerald-dark);
+}
+
+

@@ -1,0 +1,47 @@
+.vue-notification-template.tf-toast {
+  padding: 10px;
+  margin: 0 5px 5px;
+  font-size: 14px;
+
+  &.info {
+    color: var(--tf-color-white);
+    background: var(--tf-color-slate-blue);
+    border-left: 5px solid var(--tf-color-sapphire);
+  }
+
+  &.warn {
+    color: var(--tf-color-white);
+    background: var(--tf-color-amber);
+    border-left: 5px solid color-mix(in srgb, var(--tf-color-amber) 80%, black);
+  }
+
+  &.error {
+    color: var(--tf-color-white);
+    background: var(--tf-color-ruby-red);
+    border-left: 5px solid color-mix(in srgb, var(--tf-color-ruby-red) 80%, black);
+  }
+
+  &.success {
+    color: var(--tf-color-white);
+    background: var(--tf-color-emerald-dark);
+    border-left: 5px solid color-mix(in srgb, var(--tf-color-emerald-dark) 80%, black);;
+  }
+}
+
+.v-fade-top-enter-active, .v-fade-top-leave-active, .v-fade-top-move  {
+  transition: all .5s;
+}
+
+.v-fade-top-enter-from, .v-fade-top-leave-to {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.v-fade-bottom-enter-active, .v-fade-bottom-leave-active, .v-fade-bottom-move  {
+  transition: all .5s;
+}
+
+.v-fade-bottom-enter-from, .v-fade-bottom-leave-to {
+  opacity: 0;
+  transform: translateY(100%);
+}

@@ -1,0 +1,33 @@
+.tf-input {
+  background-clip: padding-box;
+  background-color: var(--tf-color-white);
+  border: 1px solid var(--tf-color-sapphire);
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: var(--tf-color-sapphire);
+  display: initial;
+  height: 40px;
+  outline: none;
+  padding: 6px;
+  transition: background 1s ease-out 1s;
+  width: 100%
+}
+
+.tf-input::placeholder {
+  color: var(--tf-color-slate-blue);
+}
+
+.tf-input:-webkit-autofill,
+.tf-input:-webkit-autofill:hover,
+.tf-input:-webkit-autofill:focus,
+.tf-input:-webkit-autofill{
+  -webkit-text-fill-color: #ссс;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 174, 255, 0.04) 50%, rgba(255, 255, 255, 0) 51%, rgba(0, 174, 255, 0.03) 100%);
+}
+
+.tf-input:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}

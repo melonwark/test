@@ -1,0 +1,166 @@
+@import "vue-sidebar-menu/dist/vue-sidebar-menu.css";
+
+#app .v-sidebar-menu {
+  font-weight: 700;
+  z-index: 1040;
+  width: 240px;
+  background-size: cover;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+
+
+  --vsm-primary-color: var(--tf-color-white);
+  --vsm-base-bg: var(--tf-color-indigo);
+  --vsm-item-color: var(--tf-color-white);
+  --vsm-item-active-color: var(--tf-color-white);
+  --vsm-item-active-line-color: var(--tf-color-emerald);
+  --vsm-item-hover-bg: var(--tf-color-sapphire);
+  --vsm-item-hover-color: var(--tf-color-emerald);
+  --vsm-item-open-bg: var(--tf-color-indigo);
+  --vsm-item-open-color: var(--tf-color-white);
+  --vsm-item-active-bg: var(--tf-color-sapphire);
+  --vsm-mobile-item-color: #fff;
+  --vsm-mobile-item-bg: var(--tf-color-indigo);
+  --vsm-mobile-icon-color: var(--vsm-mobile-item-color);
+  --vsm-mobile-icon-bg: transparent;
+  --vsm-item-padding: 10px;
+  --vsm-icon-bg: var(--tf-color-emerald);
+}
+#app .v-sidebar-menu .sidebar-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  min-height: 56px;
+  background: var(--tf-color-indigo);
+  padding: 0 10px;
+}
+#app .v-sidebar-menu .sidebar-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  height: 1px;
+  background: var(--tf-color-emerald);
+}
+#app .v-sidebar-menu .sidebar-header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  z-index: 21;
+  width: 100%;
+  height: 1px;
+  background: var(--tf-color-sapphire);
+}
+#app .v-sidebar-menu .sidebar-header__logo {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#app .v-sidebar-menu.vsm_collapsed .vsm--dropdown {
+  top: 36px !important;
+  background-color: var(--tf-color-indigo);
+  border-bottom-right-radius: 4px;
+}
+#app .v-sidebar-menu.vsm_collapsed .vsm--link_level-2 {
+  padding: 6px;
+}
+#app .v-sidebar-menu.vsm_collapsed .vsm--mobile-item {
+  max-width: 260px !important;
+  background: var(--tf-color-indigo);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+#app .v-sidebar-menu.vsm_collapsed .vsm--mobile-bg {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+#app .v-sidebar-menu.vsm_expanded {
+  max-width: 240px;
+}
+#app .v-sidebar-menu.vsm_expanded .vsm--item .vsm--icon {
+  width: 40px;
+  transition: width 0.2s ease;
+}
+#app .v-sidebar-menu .vsm--list {
+  padding: 12px 5px;
+}
+#app .v-sidebar-menu .vsm--icon {
+  font-size: 22px;
+}
+
+#app .v-sidebar-menu .vsm--link_level-1 .vsm--icon {
+  background: url("../images/blocks-group.svg") center center no-repeat;
+  background-size: contain;
+  width: 40px;
+  transition: width 0.2s 0.2s ease;
+}
+#app .v-sidebar-menu .vsm--link_level-1 + .vsm--dropdown .vsm--list {
+  padding-left: 40px;
+}
+#app .v-sidebar-menu .vsm--link_level-2 {
+  padding: 6px;
+}
+
+#app .expand-enter-active,
+#app .expand-leave-active {
+  transition: height 0.2s ease;
+  overflow: hidden;
+}
+#app .slide-animation-enter-active,
+#app .slide-animation-leave-active {
+  transition: width 0.2s ease;
+}
+#app .fade-animation-enter-active,
+#app .fade-animation-leave-active {
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+#app .vsm--scroll-wrapper::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 5px;
+  background-color: rgba(238, 233, 233, 0.12);
+}
+#app .vsm--scroll-wrapper::-webkit-scrollbar-track {
+  background-color: rgba(238, 233, 233, 0.12);
+  border-radius: 5px;
+  width: 8px;
+}
+#app .vsm--scroll-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  height: 20px;
+  background-color: var(--tf-color-indigo);
+}
+#app .vsm--scroll-wrapper {
+  scrollbar-color: rgba(47, 53, 86, 0.52) rgba(238, 233, 233, 0.12);
+  scrollbar-width: thin;
+}
+#app .vsm_collapsed .vsm--scroll-wrapper {
+  margin-right: 0 !important;
+}
+
+
+
+@media (max-width: 767px) {
+  #app .v-sidebar-menu {
+    margin-top: 57px;
+  }
+  #app .v-sidebar-menu.vsm_collapsed {
+    display: none;
+  }
+  #app .v-sidebar-menu .sidebar-header {
+    display: none;
+  }
+}
+
+
+
+

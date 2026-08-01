@@ -1,0 +1,91 @@
+.tf-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  line-height: 1;
+  padding: 0.35em;
+  border-radius: 0.25rem;
+}
+
+.tf-badge-copy {
+  cursor: copy;
+}
+
+.tf-badge-default {
+  background-color: var(--tf-color-sapphire);
+  color: var(--tf-color-white);
+}
+
+.tf-badge-default-outline {
+  background: var(--tf-color-white);
+  border: 1px solid var(--tf-color-sapphire);
+  color: var(--tf-color-sapphire);
+}
+
+.tf-badge-secondary {
+  background: var(--tf-color-light-slate-blue);
+  color: var(--tf-color-white);
+}
+
+.tf-badge-secondary-outline {
+  background: var(--tf-color-white);
+  border: 1px solid var(--tf-color-light-slate-blue);
+  color: var(--tf-color-light-slate-blue);
+}
+
+.tf-badge-info {
+  background: var(--tf-color-slate-blue);
+  color: var(--tf-color-white);
+}
+
+.tf-badge-info-outline {
+  background: var(--tf-color-white);
+  border: 1px solid var(--tf-color-slate-blue);
+  color: var(--tf-color-slate-blue);
+}
+
+.tf-badge-danger {
+  background-color: var(--tf-color-ruby-red);
+  color: var(--tf-color-white);
+}
+
+.tf-badge-danger-outline {
+  background: var(--tf-color-white);
+  border: 1px solid var(--tf-color-ruby-red);
+  color: var(--tf-color-ruby-red);
+}
+
+.tf-badge-success {
+  background-color: var(--tf-color-emerald-dark);
+  color: var(--tf-color-white);
+}
+
+.tf-badge-success-outline {
+  background: var(--tf-color-white);
+  border: 1px solid var(--tf-color-emerald-dark);
+  color: var(--tf-color-emerald-dark);
+}
+
+.tf-badge-warning {
+  background-color: var(--tf-color-amber);
+  color: var(--tf-color-white);
+}
+
+.tf-badge-warning-outline {
+  background: var(--tf-color-white);
+  border: 1px solid var(--tf-color-amber);
+  color: var(--tf-color-amber);
+}
+
+.tf-badge-sm {
+  font-size: .7em;
+}
+
+.tf-badge-md {
+  font-size: .9em;
+}
+
+.tf-badge-lg {
+  font-size: 1.1em;
+}

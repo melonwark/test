@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="6px" viewBox="0 0 11 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>left-arrow (1)</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PA-Admin-Final-Hover" transform="translate(-1195.000000, -239.000000)" fill="#0049C9">
+            <g id="Group-2" transform="translate(228.000000, 144.000000)">
+                <g id="left-arrow-(1)" transform="translate(972.500000, 98.000000) scale(-1, 1) rotate(-90.000000) translate(-972.500000, -98.000000) translate(970.000000, 93.000000)">
+                    <path d="M4.43729904,9.89655172 C4.50160772,9.96551724 4.58199357,10 4.67041801,10 C4.75884244,10 4.8392283,9.96551724 4.90353698,9.89655172 C5.03215434,9.75862069 5.03215434,9.53448276 4.90353698,9.39655172 L0.803858521,5 L4.90353698,0.603448276 C5.03215434,0.465517241 5.03215434,0.24137931 4.90353698,0.103448276 C4.77491961,-0.0344827586 4.5659164,-0.0344827586 4.43729904,0.103448276 L0.0964630225,4.75 C-0.0321543408,4.88793103 -0.0321543408,5.11206897 0.0964630225,5.25 L4.43729904,9.89655172 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

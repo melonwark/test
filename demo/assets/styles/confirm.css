@@ -1,0 +1,122 @@
+.tf-confirm-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5001;
+  transition: opacity .1s;
+}
+
+.tf-confirm-box__content {
+  margin: 50px auto;
+  max-width: 480px;
+  padding: 10px;
+  background: white;
+  border-radius: 4px;
+}
+
+.tf-confirm-box__title {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.tf-confirm-box__message {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.tf-confirm-box__actions {
+  text-align: right;
+}
+
+.tf-confirm-box.open {
+  animation: backgroundAnimation 100ms forwards cubic-bezier(.8, .02, .45, .91);
+}
+.tf-confirm-box.open .tf-confirm-box__content {
+  animation: showConfirmAnimation 400ms forwards cubic-bezier(.8, .02, .45, .91);
+}
+
+.tf-confirm-box-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+.tf-confirm-box-icon::after {
+  content: '';
+  display: block;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiPgo8ZyBpZD0iaWNvbW9vbi1pZ25vcmUiPgo8L2c+CjxwYXRoIGQ9Ik0xNS45OTkgMy40NzJsLTE0LjM5NCAyNS4wNTdoMjguNzg5bC0xNC4zOTUtMjUuMDU3ek0xNS45OTkgNS42MTJsMTIuNTUzIDIxLjg1aC0yNS4xMDVsMTIuNTUyLTIxLjg1eiIgZmlsbD0iI2Q5MjU1MCI+PC9wYXRoPgo8cGF0aCBkPSJNMTUuNDY2IDEzLjYwMWgxLjA2NnY3LjQ2NGgtMS4wNjZ2LTcuNDY0eiIgZmlsbD0iI2Q5MjU1MCI+PC9wYXRoPgo8cGF0aCBkPSJNMTUuOTk4IDIyLjY2NGMtMC40NDEgMC0wLjc5OCAwLjM1OC0wLjc5OCAwLjggMCAwLjQ0IDAuMzU3IDAuNzk5IDAuNzk4IDAuNzk5IDAuNDQzIDAgMC44MDEtMC4zNTggMC44MDEtMC43OTkgMC0wLjQ0Mi0wLjM1OC0wLjgtMC44MDEtMC44eiIgZmlsbD0iI2Q5MjU1MCI+PC9wYXRoPgo8L3N2Zz4K');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  width: 32px;
+  height: 32px;
+}
+
+
+.tf-confirm-box-btn {
+  display: inline-flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-color: transparent;
+  border-radius: 0.25rem;
+  padding: 2px 10px;
+  border-width: 1px;
+  line-height: 1.5rem;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.tf-confirm-box-btn-cancel{
+  background: var(--tf-color-ruby-red);
+  color: var(--tf-color-white);
+}
+
+
+.tf-confirm-box-btn-ok {
+  background: var(--tf-color-emerald-dark);
+  color: var(--tf-color-white);
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background: rgba(47, 53, 88, 0);
+  }
+  50% {
+    background: rgba(47, 53, 88, 0.15);
+  }
+  100% {
+    background: rgba(47, 53, 88, 0.3);
+  }
+}
+
+@keyframes showConfirmAnimation {
+  60%,
+  75%,
+  90%,
+  0%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0)
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0)
+  }
+  75% {
+    transform: translate3d(0, -10px, 0)
+  }
+  90% {
+    transform: translate3d(0, 5px, 0)
+  }
+  to {
+    transform: none
+  }
+}

@@ -1,0 +1,146 @@
+.tf-dropdown-switcher {
+  position: relative;
+  display: inline;
+}
+
+.tf-dropdown {
+  position: absolute;
+  border: none;
+  float: none;
+  background: var(--tf-color-sapphire);
+  text-align: left;
+  white-space: normal;
+  background-clip: padding-box;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.tf-dropdown-header {
+  padding: 5px 10px;
+  color: var(--tf-color-white);
+  border-bottom: 1px solid var(--tf-color-emerald);
+}
+
+.tf-dropdown-body {
+  padding: 10px;
+  color: var(--tf-color-white);
+}
+
+.tf-dropdown_center {
+  right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tf-dropdown_right {
+  right: 0;
+  left: auto;
+}
+
+.tf-dropdown_left {
+  left: 0;
+  right: auto;
+}
+
+.tf-dropdown_center.dropdown-enter-active {
+  animation: bounceInDown .2s;
+}
+
+.tf-dropdown_left.dropdown-enter-active {
+  animation: bounceInDownLeft .2s;
+}
+
+.tf-dropdown_right.dropdown-enter-active {
+  animation: bounceInDownRight .2s;
+}
+
+.flip-in-y-enter-active {
+  backface-visibility: visible !important;
+  animation-name: flipInY;
+  animation-duration: .75s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%) translateX(-50%);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(25px) translateX(-50%);
+  }
+  75% {
+    transform: translateY(-10px) translateX(-50%);
+  }
+  90% {
+    transform: translateY(5px) translateX(-50%);
+  }
+  to {
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+@keyframes bounceInDownRight {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%) translateX(0);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(25px) translateX(0);
+  }
+  75% {
+    transform: translateY(-10px) translateX(0);
+  }
+  90% {
+    transform: translateY(5px) translateX(0);
+  }
+  to {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+@keyframes bounceInDownLeft {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%) translateX(0);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(25px) translateX(0);
+  }
+  75% {
+    transform: translateY(-10px) translateX(0);
+  }
+  90% {
+    transform: translateY(5px) translateX(0);
+  }
+  to {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+
+@keyframes flipInY {
+  0% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0
+  }
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in
+  }
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1
+  }
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg)
+  }
+  to {
+    transform: perspective(400px)
+  }
+}
