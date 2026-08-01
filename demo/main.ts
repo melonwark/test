@@ -11,7 +11,7 @@ import Table from './views/Table.vue';
 import Modal from './views/Modal.vue';
 import Dropdown from './views/Dropdown.vue';
 import Button from './views/Button.vue';
-import Toast from './views/ Toast.vue';
+import Toast from './views/Toast.vue';
 import Badge from './views/Badge.vue';
 import Card from './views/Card.vue';
 import VueClipboard from 'vue3-clipboard';
