@@ -58,8 +58,8 @@ jobs:
         with:
           name: dist
           path: dist/
-          
-      - name: Start dev server
+
+      - name: Start devsuka server
         run: |
           npm run dev &
           sleep 5
