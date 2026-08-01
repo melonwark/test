@@ -55,7 +55,7 @@ jobs:
 
       - name: Start dev server
         run: |
-          npm run dev &
+          npm run preview &
           sleep 5
 
       - name: Run Cypress tests
