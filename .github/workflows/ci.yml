@@ -68,6 +68,12 @@ jobs:
         run: npm run cy:run:allure
         continue-on-error: true
 
+      - name: Run Cypress tests
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
+          headless: true
+
       - name: Generate Allure report
         run: npm run allure:generate
 
