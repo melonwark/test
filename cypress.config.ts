@@ -2,7 +2,7 @@ import { defineConfig } from "cypress";
 const allureWriter = require('@shelex/cypress-allure-plugin/writer')
 
 export default defineConfig({
-  allowCypressEnv: false,
+  // allowCypressEnv: false,
 
   e2e: {
     setupNodeEvents(on, config) {
